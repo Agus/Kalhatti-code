@@ -43,9 +43,15 @@ func sumLeaves(node *TreeNode, nodes []int, sum int, givenSum int, paths *[][]in
 }
 
 func main() {
-	if len(os.Args) != 2 {fmt.Println("Please provide an integer"); return;};
-	givenSum, err := strconv.Atoi(os.Args[1]);
-	if err != nil {fmt.Println("Please provide an integer")};
+	givenSum := 22
+	if len(os.Args) == 2{
+		givenSumParameter, err := strconv.Atoi(os.Args[1])
+		if err != nil {
+			fmt.Println("Please provide an integer");
+			return;
+		}
+		givenSum = givenSumParameter;
+	}
 	tree := populateTree();
 	var nodes [][]int;
 	sumLeaves(tree,make([]int,0),0, givenSum, &nodes);
