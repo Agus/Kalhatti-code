@@ -1,12 +1,11 @@
-package main
-
-import "fmt"
 import "math"
-
-func main(){
-  rows := []string{"53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"}
-  result := validSudoku(rows);
-  fmt.Println(result);
+/**
+ * @input A : array of strings
+ *
+ * @Output Integer
+ */
+func isValidSudoku(A []string )  (int) {
+   return validSudoku(A);
 }
 
 func validSudoku(rows []string) int{
