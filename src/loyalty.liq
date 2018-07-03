@@ -1,5 +1,3 @@
-(* Auction contract from https://www.michelson-lang.com/contract-a-day.html *)
-
 [%%version 0.15]
 
 type loyalty = {
